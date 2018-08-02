@@ -20,8 +20,11 @@ public class User implements Serializable {
     @Column(name = "login")
     private String login;
 
-    @Column(name = "lastname")
-    private String administrator;
+    @Column(name = "password")
+    private String password;
+
+    @Column(name = "administrator")
+    private Integer administrator;
 
     protected User(){}
 
@@ -33,13 +36,19 @@ public class User implements Serializable {
 
     }
 
-    public User(String firstName, String lastName, String login, String administrator){
+    public User(String firstName, String lastName, String login, String password, Integer administrator){
 
         this.firstName = firstName;
         this.lastName = lastName;
         this.login = login;
+        this.password = password;
         this.administrator = administrator;
 
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Customer[id=%d, firstName='%s', lastName='%s']", id, firstName, lastName);
     }
 
 

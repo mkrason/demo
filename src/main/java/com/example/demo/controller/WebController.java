@@ -15,9 +15,9 @@ public class WebController {
 
     @RequestMapping("/save")
     public String process() {
-        repository.save(new User("Jack", "Smith", "mylogin", "1"));
-        repository.save(new User("Jack2", "Smith2", "mylogin2", "1"));
-        repository.save(new User("Jack3", "Smith3", "mylogin3", "1"));
+        repository.save(new User("Jack", "Smith", "mylogin", "secret", 1));
+        repository.save(new User("Jack2", "Smith2", "mylogin2", "secret", 1));
+        repository.save(new User("Jack3", "Smith3", "mylogin3", "secret", 1));
         return "Done";
 
     }
